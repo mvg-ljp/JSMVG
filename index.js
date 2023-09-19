@@ -51,13 +51,11 @@ class Item {
     iva() {
         this. precio = this.precio *1.21;
     }
+}
+    const items =[];
+        items.push(new Item ("vino", "4500") );
+        items.push(new Item ("aperol", "2500") );
+        items.push(new Item ("espumante", "5000") );
   
-  
-  const items =[];
-  items.push(new Item ("vino", "4500") );
-  items.push(new Item ("aperol", "2500") );
-  items.push(new Item ("espumante", "5000") );
-  
-  for (const items of items )
-  item.iva();
-  
+    for (const items of items )
+    item.iva();
