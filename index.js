@@ -41,6 +41,15 @@ const CalculadoraPrecio = {
     return precioFinal;
   },
 };
+/*::::::::::::::::::::::::::::::::*/
+CalculadoraPrecio.establecerPrecioInicial(4500); 
+CalculadoraPrecio.establecerIva(21);   //  21%
+CalculadoraPrecio.establecerDescuento(30);   //  descuento del 30%
+
+const precioFinal = CalculadoraPrecio.calcularPrecioFinal();
+console.log(`El precio total es: $${precioFinal}`);
+
+/*::::::::::::::::::::::::::::::::*/
 /*array*/
 class Item {
     constructor (nombre, precio) {
