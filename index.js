@@ -17,3 +17,47 @@ for(let i = 1; i<100; i++){
     }
     alert(nombre +" Puesto N° " +i+ "para realizar tu compra");
 }
+/* calcular precio producto*/
+//  objeto CalculadoraPrecio
+const CalculadoraPrecio = {
+    precioInicial: 0,
+    iva: 0,
+    descuento: 0,
+    //metodo
+    establecerPrecioInicial: function (precio) {
+        this.precioInicial= precio;
+      },
+      establecerIva: function (porcentaje) {
+        this.iva = porcentaje;
+      },
+      establecerDescuento: function (porcentaje) {
+        this.descuento = porcentaje;
+      },
+       // calcular el precio total
+  calcularPrecioFinal: function () {
+    const ivaCalculado = this.precioInicial * (this.iva / 100);
+    const descuentoCalculado = this.precioInicial * (this.descuento / 100);
+    const precioFinal = this.precioInicial + ivaCalculado - descuentoCalculado;
+    return precioFinal;
+  },
+};
+/*array*/
+class Item {
+    constructor (nombre, precio) {
+        this.nombre = nombre.toUpperCase ();
+        this.precio = parseFloat(precio);
+    }
+  
+    iva() {
+        this. precio = this.precio *1.21;
+    }
+  
+  
+  const items =[];
+  items.push(new Item ("vino", "4500") );
+  items.push(new Item ("aperol", "2500") );
+  items.push(new Item ("espumante", "5000") );
+  
+  for (const items of items )
+  item.iva();
+  
